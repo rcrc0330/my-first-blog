@@ -1,0 +1,10 @@
+<h3>HERE ARE ALL MY ALBUMS</h3>
+{% if all_albums %}
+    <ul>
+        {% for album in all_albums %}
+        <li><a href="/app/{{ album.id }}/">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>YOU DON'T HAVE ANY ALBUM</h3>
+{% endif %}
